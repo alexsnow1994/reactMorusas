@@ -1,4 +1,5 @@
 
+import MainMorusas from './components/MainMorusas';
 import MorusasHeader from './components/MorusasHeader';
 import './styles/App.css';
 
@@ -8,6 +9,9 @@ function App() {
       <header id='morusasHeader'>
         <MorusasHeader/>        
       </header>
+      <main>
+        <MainMorusas/>   
+      </main>
     </div>
   );
 }
