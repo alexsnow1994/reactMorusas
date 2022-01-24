@@ -1,4 +1,6 @@
 
+import BookForm from './components/BookForm';
+import FooterMorusas from './components/FooterMorusas';
 import MainMorusas from './components/MainMorusas';
 import MorusasHeader from './components/MorusasHeader';
 import './styles/App.css';
@@ -10,8 +12,14 @@ function App() {
         <MorusasHeader/>        
       </header>
       <main>
-        <MainMorusas/>   
+        <MainMorusas/>
+        <section>
+          
+        </section>   
       </main>
+      <footer id="footerMorusas">
+           <FooterMorusas />
+      </footer> 
     </div>
   );
 }
