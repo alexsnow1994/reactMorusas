@@ -1,6 +1,10 @@
-.Logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 160px; }
+#navBar {
+  background: #3131db;
+  background: linear-gradient(313deg, #3131db 0%, #22d8e3 57%, #f7fcfc 77%);
+  font-family: "Mochiy Pop P One", sans-serif; }
+  #navBar .Logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 160px; }
 
 /*# sourceMappingURL=App.css.map */

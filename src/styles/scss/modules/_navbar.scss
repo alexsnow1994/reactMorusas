@@ -1,6 +1,14 @@
+@import './variables';
+
+#navBar {
+    background: rgb(49,49,219);
+background: linear-gradient(313deg, rgba(49,49,219,1) 0%, rgba(34,216,227,1) 57%, rgba(247,252,252,1) 77%);
+font-family: $principal_font;
 
 .Logo  {
+
     width:60px;
     height:60px;
     border-radius:160px;    
+}
 }
