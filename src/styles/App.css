@@ -1,17 +1,6 @@
-#morusasHeader {
-  font-family: "Mochiy Pop P One", sans-serif; }
-  #morusasHeader .container-fluid {
-    background: #3333ff;
-    background: linear-gradient(313deg, #3333ff 0%, #22d8e3 64%, #f7fcfc 100%);
-    border-radius: 10px; }
-    #morusasHeader .container-fluid .col-3 {
-      text-align: center; }
-
-#footerMorusas {
-  font-family: "Mochiy Pop P One", sans-serif; }
-  #footerMorusas .container-fluid {
-    background: #3333ff;
-    background: linear-gradient(313deg, #3333ff 0%, #22d8e3 64%, #f7fcfc 100%);
-    border-radius: 10px; }
+.Logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 160px; }
 
 /*# sourceMappingURL=App.css.map */
