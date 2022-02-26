@@ -3,9 +3,9 @@ import React, {useState , useEffect, useContext} from 'react'
 export default function Home() {
   return (
     <>
-     <div className='grid md:grid-cols-2 gap-4 grid-cols-1  space-x-10 space-y-10'>
-       <div>Morusas de Ciencia es un proyecto de divulgación y difusión de la ciencia en el que se busca acercar los conocimientos de los laboratorios y espacios académicos a los barrios. Nuestro objetivo es generar experiencias divulgativas en espacios populares donde todos y todas sean libres de participar de manera activa, aprender y expresarse, pues creemos en el derecho a la cultura y el potencial de la Ciencia para transformar la calidad de vida de las personas. Este proyecto es interdisciplinario, puesto que se realizan actividades relacionadas con distintas percepciones del arte haciendo uso del conocimiento científico.
-
+     <div className='grid md:grid-cols-4  sm:grid-cols-1'>
+       <div>
+          <img className="" src="http://drive.google.com/uc?export=view&id=1uCmS4UPLXybeAkm12orp4LOROks-hUyf"/>
        </div>
        <div>2</div>
      </div>
@@ -73,3 +73,7 @@ export default function Home() {
     </>
   )
 };
+
+
+
+// Morusas de Ciencia es un proyecto de divulgación y difusión de la ciencia en el que se busca acercar los conocimientos de los laboratorios y espacios académicos a los barrios. Nuestro objetivo es generar experiencias divulgativas en espacios populares donde todos y todas sean libres de participar de manera activa, aprender y expresarse, pues creemos en el derecho a la cultura y el potencial de la Ciencia para transformar la calidad de vida de las personas. Este proyecto es interdisciplinario, puesto que se realizan actividades relacionadas con distintas percepciones del arte haciendo uso del conocimiento científico.
