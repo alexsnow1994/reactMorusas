@@ -6,6 +6,7 @@ import Home from './components/Home';
 
 import Footer from './components/Footer';
 import BookState from './context/bookContext/BookState';
+import Bookform from './components/pages/Bookform';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/" element={<Layout/>}>
           <Route path="/" element={<Home />}/>
           
-          <Route path='/bookform' element={<BookState/>}/>
+          <Route path='/bookform' element={<Bookform/>}/>
         </Route>
         
       </Routes>
