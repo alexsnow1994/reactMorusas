@@ -9,7 +9,7 @@ export default function BookState() {
   return (
     <>
     <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-2 p-4'>
-    <div className='grid grid-cols-2'>
+    <div className='grid grid-cols-2 sm:grid-cols-1'>
     <div>
     <form className="w-full max-w-lg">
   <div className="flex flex-wrap -mx-3 mb-6">
