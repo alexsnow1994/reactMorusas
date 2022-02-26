@@ -1,54 +1,125 @@
-import React from 'react'
+import React,{useState, useEffect, useContext} from 'react'
+import BookContext from '../../context/bookContext/BookContext'
 
 export default function Bookform() {
+    const ctxBooks = useContext(BookContext)
+    const {
+        books,
+        getBooks,
+        createBook,
+        // delatebook
+    } = ctxBooks
+    const [data, setData] = useState({
+        title:"",
+        author: "",
+        isbn:""
+        
+    })
+    const [error, setError] = useState("");
+    
+    useEffect(()=> {
+        getBooks();
+    }, []);
+
+    const handleChange = (event)=>{
+        setData({
+            ...data,
+            [event.target.name]:event.target.value
+        })
+    }
+    const handleSubmit = (event)=> {
+        event.preventDefault();
+        if(!data.title || !data.author || !data.isbn){
+
+			return setError("Tienes campos vacíos.")
+
+		};
+        createBook(data)
+        setData({
+			title: "",
+			author: "",
+            isbn:""
+		});
+
+        return setError("");
+
+    }
   return (
     <>
         <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-2 p-4'>
     <div className='grid grid-cols-2 sm:grid-cols-1'>
     <div>
-    <form className="w-full max-w-lg">
+    <form onSubmit={ (evt) => { handleSubmit(evt) } } className="w-full max-w-lg">
   <div className="flex flex-wrap -mx-3 mb-6">
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-first-name">
+      <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor="grid-first-name">
         Titulo
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="El resplandor"/>
+      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"   placeholder="El resplandor"
+      name="title"
+      value={data.tittle}
+      onChange={(evt) => {handleChange(evt)}}
+      />
       
     </div>
     <div className="w-full md:w-1/2 px-3">
-      <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-last-name">
+      <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor="grid-last-name">
         Autor
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Stephen King"/>
+      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Stephen King"
+      name="author"
+      value={data.author}
+      onChange={(evt) => {handleChange(evt)}}
+      />
     </div>
   </div>
   <div className="flex flex-wrap -mx-3 mb-6">
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-password">
+      <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor="grid-password">
         ISBN
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="ISBN:9780450032202"/>
+      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password"  placeholder="ISBN:9780450032202"
+      name="isbn"
+      value={data.isbn}
+      onChange={(evt) => {handleChange(evt)}}
+      />
      
     </div>
   </div>
 
   <div className="flex flex-wrap -mx-3 mb-6">
-    <div className="w-full px-3">
+    {/* <div className="w-full px-3">
       <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" >
         Imagen
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="Elresplandor.jpg"/>
-      <button type="submit"className='transition ease-in-out delay-150 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white rounded-lg'>
-        submit
-      </button>
+      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"   placeholder="Elresplandor.jpg"/>
       
-    </div>
+      
+    </div> */}
+    <button type="submit"className='transition ease-in-out delay-150 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white rounded-lg'>
+        ENVIAR
+      </button>
   </div>
   
 </form>
 </div>
-<div>2</div>
-
+<div> 
+{ error ? error : null }
+</div>
+<h1>LISTADO DE LIBROS</h1>
+<ul>
+			{
+				books.map((e, index) => {
+					return (
+						<li key={index}>
+							<h3>{e.title}</h3>
+							<p>{e.author}</p>
+							<p>{e.isbn}</p>
+						</li>
+					)
+				})
+			}
+		</ul>
 </div>
 
 <div className='grid grid-cols-1 text-center text-white m-4 font-extrabold text-2xl'>

@@ -6,16 +6,12 @@ import BookReducer from "./BookReducer";
 const BookState = (props) => {
   
     const initialState =  {
-      currentBook:{
-        title: "",
-        author: "",
-        isbn:""
-      }
+      books:[]
     };
     const [globalState, dispatch]= useReducer(BookReducer, initialState);
 
     const getBooks = async()=>{
-      const res = await axiosClient.get("/api/books/readall")
+      const res = await axiosClient.get("/api/books/readall/")
       console.log(res);
       dispatch({
         type:"GET_ALL_BOOKS",
@@ -24,7 +20,7 @@ const BookState = (props) => {
     };
     
     const createBook = async (dataForm) =>{
-      const res = await axiosClient.post("/api/books/create", dataForm);
+      const res = await axiosClient.post("/api/books/createbook", dataForm);
       console.log(res);
 
       getBooks();
@@ -43,7 +39,11 @@ const BookState = (props) => {
           delateBook
 
         }}
-      ></BookContext.Provider>
+        >
+          {props.children}
+        </BookContext.Provider>
     )
 
 }
+
+export default BookState
