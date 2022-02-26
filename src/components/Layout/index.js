@@ -5,9 +5,9 @@ export default function Layout() {
   return (
     <>
       
-<nav className="bg-white">
+<nav className="bg-white m-4">
   <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ">
-    <div className="relative flex items-center justify-between h-16 border-solid rounded-lg border-4 border-black">
+    <div className="relative flex items-center justify-between h-16 border-solid rounded-lg border-1 border-black">
       <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
       
         <button type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
@@ -30,7 +30,7 @@ export default function Layout() {
         </div>
         <div className="hidden sm:block sm:ml-6">
           <div className="flex text-center space-x-4">
-           <Link to='/bookform' type='button' className='bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-white rounded-lg'>
+           <Link to='/bookform' type='button' className='transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ... text-white rounded-lg'>
            <a  aria-current="page">Tu Libro</a>
            </Link>
             
