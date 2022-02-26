@@ -32,8 +32,8 @@ export default function Layout() {
         </div>
         <div className="hidden sm:block sm:ml-6">
           <div className="flex text-center space-x-4">
-           <Link to='/Bookform' type='button' className='transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ... text-white rounded-lg'>
-           <p  aria-current="page">Tu Libro</p>
+           <Link to='/bookform' type='button' className='transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ... text-white rounded-lg'>
+           <p aria-current="page">Tu Libro</p>
            </Link>
             
 

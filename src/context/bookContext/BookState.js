@@ -10,24 +10,29 @@ const BookState = (props) => {
     };
     const [globalState, dispatch]= useReducer(BookReducer, initialState);
 
-    const getBooks = async()=>{
-      const res = await axiosClient.get("/api/books/readall")
-      console.log(res);
+    const getBooks = async () =>{
+      const res = await axiosClient.get("/api/books/readall/")
+      console.log("getBooks response:", res.data);
+
       dispatch({
         type:"GET_ALL_BOOKS",
-        payload: res.data.data
+        payload: res.data
       });
     };
     
     const createBook = async (dataForm) =>{
+
       const res = await axiosClient.post("/api/books/createbook", dataForm);
       console.log(res);
 
       getBooks();
+      
     }
 
-    const delateBook =  async (id)=>{
-      const res= await axiosClient.delete("/api/books/:id", id);
+    const delateBook =  async (id)=> {
+
+      await axiosClient.delete("/api/books/:id", id);
+
     }
 
     return(
@@ -37,7 +42,6 @@ const BookState = (props) => {
           getBooks,
           createBook,
           delateBook
-
         }}
         >
           {props.children}
