@@ -24,9 +24,11 @@ export default function Layout() {
       </div>
       <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
         <div className="flex-shrink-0 flex items-center font-mono ">
+          <Link to="/" type='button'>
           <img className="block  h-12 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=107wsbiRk_b242azkeAcwg3yQPGbChaw-" alt="Morusas"/>
           <p>MORUSAS DE CIENCIAS</p>
           {/* <img className="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"/> */}
+          </Link>
         </div>
         <div className="hidden sm:block sm:ml-6">
           <div className="flex text-center space-x-4">

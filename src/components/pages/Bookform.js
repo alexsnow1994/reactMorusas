@@ -6,13 +6,14 @@ export default function Bookform() {
     const {
         books,
         getBooks,
-        createBook,
+        createBook
         // delatebook
     } = ctxBooks
     const [data, setData] = useState({
         title:"",
         author: "",
-        isbn:""
+        isbn:"",
+        id:""
         
     })
     const [error, setError] = useState("");

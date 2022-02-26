@@ -11,7 +11,7 @@ const BookState = (props) => {
     const [globalState, dispatch]= useReducer(BookReducer, initialState);
 
     const getBooks = async()=>{
-      const res = await axiosClient.get("/api/books/readall/")
+      const res = await axiosClient.get("/api/books/readall")
       console.log(res);
       dispatch({
         type:"GET_ALL_BOOKS",
@@ -41,7 +41,7 @@ const BookState = (props) => {
         }}
         >
           {props.children}
-        </BookContext.Provider>
+      </BookContext.Provider>
     )
 
 }
