@@ -3,7 +3,7 @@ import React from 'react'
 export default function Home() {
   return (
     <>
-    <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-2'>
+    <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5'>
     <div className='grid gap grid-cols-1 text-center text-white font-mono text-2xl font-bold '>
     <h1>TALLERES PRESENCIALES</h1>
     </div>
