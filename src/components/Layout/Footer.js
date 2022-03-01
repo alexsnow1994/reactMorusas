@@ -23,9 +23,7 @@ export default function Footer() {
      
 
       
-
-      
-    </div>
+</div>
     <div className="mt-8 md:mt-0 md:order-1">
       <p className="">&copy; 2021 Morusas, Inc. All rights reserved.</p>
     </div>

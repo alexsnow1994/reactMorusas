@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
-import BookContext from '../../context/bookContext/BookContext'
+import BookContext from '../../../context/bookContext/BookContext'
+
+import BookRender from './BookRender'
 
 export default function Bookform() {
   const ctxBooks = useContext(BookContext)
@@ -111,19 +113,8 @@ export default function Bookform() {
           <div>
             {error ? error : null}
             <h1>LISTADO DE LIBROS</h1>
-          <ul>
-            {
-              books.map((e, index) => {
-                return (
-                  <li key={index}>
-                    <h3>{e.title}</h3>
-                    <p>{e.author}</p>
-                    <p>{e.isbn}</p>
-                  </li>
-                )
-              })
-            }
-          </ul>
+            
+            <BookRender/>
           </div>
          
         </div>
@@ -144,6 +135,7 @@ export default function Bookform() {
           </div>
         </div>
       </div>
+      
     </>
   )
 }
