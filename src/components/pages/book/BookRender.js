@@ -10,19 +10,27 @@ export default function BookRender() {
   return (
       
       <>
-        <ul>
-            {
-              books.map((e, index) => {
-                return (
-                  <li key={index}>
-                    <h3>{e.title}</h3>
-                    <p>{e.author}</p>
-                    <p>{e.isbn}</p>
-                  </li>
-                )
-              })
-            }
-        </ul>
+        <div className='grid-cols-3'>
+            <ul>
+                {
+                books.map((e, index) => {
+                    return (
+                    <li key={index}>
+                        <div>
+                        <h3>{e.title}</h3>
+                        </div>
+                        <div>
+                        <p>{e.author}</p>
+                        </div>
+                        <div>
+                        <p>{e.isbn}</p>
+                        </div>
+                    </li>
+                    )
+                })
+                }
+            </ul>
+        </div>
       </>
   );
 }

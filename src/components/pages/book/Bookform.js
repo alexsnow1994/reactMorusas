@@ -43,7 +43,8 @@ export default function Bookform() {
     setData({
       title: "",
       author: "",
-      isbn: ""
+      isbn: "",
+      img:[],
     });
 
     return setError("");
@@ -51,10 +52,12 @@ export default function Bookform() {
   }
   return (
     <>
-      <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5 '>
-        <div className=' grid grid-cols-2  '>
+   
+      <div className=' bg-gradient-to-r  from-cyan-500  to-blue-500 rounded-lg m-5 md:bg-black lg:bg-inherit'>
+        <div className=' grid grid-cols-1 md:grid-cols-2 text-center p-4  text-2xl '>
           <div id="bookForm">
-            <form onSubmit={(evt) => { handleSubmit(evt) }} className="w-full max-w-lg">
+            <h1>Que libro te mueve?</h1>
+            <form onSubmit={(evt) => { handleSubmit(evt) }} className="w-full max-w-lg p-4">
               <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                   <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor="grid-first-name">
@@ -135,6 +138,10 @@ export default function Bookform() {
           </div>
         </div>
       </div>
+      <div className="bg-green-500 md:bg-red-500 lg:bg-green-500">
+  prueba de cambio
+</div>
+      
       
     </>
   )
