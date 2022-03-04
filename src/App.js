@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Bookform from './components/pages/book/Bookform';
 import BookState from './context/bookContext/BookState';
 import Layout from './components/Layout';
+import Talleres from './components/pages/talleres/Talleres';
 
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
           
           <Route path="/" element={<Home/>}/>  
           <Route path='/bookform' element={<Bookform/>}/>
+          <Route path="/talleres" element={<Talleres/>}/>
         </Route>
-        
       </Routes>
       
      </BrowserRouter>

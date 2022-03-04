@@ -26,8 +26,8 @@ export default function Header() {
       <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
         <div className="flex-shrink-0 flex items-center font-mono ">
           <Link to="/" type='button'>
-          <img className="block  h-12 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=107wsbiRk_b242azkeAcwg3yQPGbChaw-" alt="Morusas"/>
-          <p>MORUSAS DE CIENCIAS</p>
+          <img className="block  h-12 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=13gXQgZXEZCUfaoN7Z-uY709RXNDc-9mc" alt="Morusas"/>
+          <h1>MORUSAS DE CIENCIAS</h1>
           {/* <img className="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"/> */}
           </Link>
         </div>
@@ -40,8 +40,8 @@ export default function Header() {
 
             <a  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Equipo</a>
 
-            <a  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Talleres</a>
-
+            <Link to="/talleres" type='button' className="text-cyan-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"><p  >Talleres</p>
+            </Link>
             <a  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendario</a>
           </div>
         </div>

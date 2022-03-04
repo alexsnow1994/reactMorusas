@@ -10,14 +10,14 @@ export default function BookRender() {
   return (
       
       <>
-        <div className='grid-cols-3'>
+        <div className='grid-cols-3 text-white'>
             <ul>
                 {
                 books.map((e, index) => {
                     return (
                     <li key={index}>
                         <div>
-                        <h3>{e.title}</h3>
+                        <h1>{e.title}</h1>
                         </div>
                         <div>
                         <p>{e.author}</p>

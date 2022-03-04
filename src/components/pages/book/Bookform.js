@@ -53,7 +53,7 @@ export default function Bookform() {
   return (
     <>
    
-      <div className=' bg-gradient-to-r  from-cyan-500  to-blue-500 rounded-lg m-5 md:bg-black lg:bg-inherit'>
+      <div className=' bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5 sm: bg-inherit '>
         <div className=' grid grid-cols-1 md:grid-cols-2 text-center p-4  text-2xl '>
           <div id="bookForm">
             <h1>Que libro te mueve?</h1>
