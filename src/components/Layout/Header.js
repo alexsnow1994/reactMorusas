@@ -8,7 +8,7 @@ export default function Header() {
   <div className=''>
 <nav className=" m-4">
   <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:mx-auto ">
-    <div className="relative flex items-center justify-between h-16 border-double rounded-lg border-3 border-black">
+    <div className=" text-yellow-500 relative flex items-center justify-between h-16 border-4 border-double rounded-lg border-3 border-black">
       <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
       
         <button type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
@@ -23,12 +23,12 @@ export default function Header() {
           </svg>
         </button>
       </div>
-      <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+      <div className="flex-1 flex items-center">
         <div className="flex-shrink-0 flex items-center font-mono ">
           <Link to="/" type='button'>
           <img className="block  h-12 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=13gXQgZXEZCUfaoN7Z-uY709RXNDc-9mc" alt="Morusas"/>
           <h1>MORUSAS DE CIENCIAS</h1>
-          {/* <img className="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"/> */}
+          
           </Link>
         </div>
         <div className="hidden sm:block sm:ml-6">

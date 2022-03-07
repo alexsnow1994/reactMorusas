@@ -53,9 +53,12 @@ export default function Bookform() {
   return (
     <>
    
-      <div className=' bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5 sm: bg-inherit '>
+      <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-4 sm:bg-none'>
+      
         <div className=' grid grid-cols-1 md:grid-cols-2 text-center p-4  text-2xl '>
+        
           <div id="bookForm">
+          
             <h1>Que libro te mueve?</h1>
             <form onSubmit={(evt) => { handleSubmit(evt) }} className="w-full max-w-lg p-4">
               <div className="flex flex-wrap -mx-3 mb-6">
@@ -63,7 +66,7 @@ export default function Bookform() {
                   <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor="grid-first-name">
                     Titulo
                   </label>
-                  <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" placeholder="El resplandor"
+                  <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white md:bg-white" placeholder="El resplandor"
                     name="title"
                     value={data.tittle}
                     onChange={(evt) => { handleChange(evt) }}
@@ -74,7 +77,7 @@ export default function Bookform() {
                   <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor="grid-last-name">
                     Autor
                   </label>
-                  <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Stephen King"
+                  <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 md:bg-white" id="grid-last-name" type="text" placeholder="Stephen King"
                     name="author"
                     value={data.author}
                     onChange={(evt) => { handleChange(evt) }}
@@ -86,7 +89,7 @@ export default function Bookform() {
                   <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor="grid-password">
                     ISBN
                   </label>
-                  <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" placeholder="ISBN:9780450032202"
+                  <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 md:bg-white" id="grid-password" placeholder="ISBN:9780450032202"
                     name="isbn"
                     value={data.isbn}
                     onChange={(evt) => { handleChange(evt) }}
@@ -122,7 +125,7 @@ export default function Bookform() {
          
         </div>
 
-        <div className='grid grid-cols-1 text-center text-white m-4 font-extrabold text-2xl'>
+        <div className='grid grid-cols-1 text-center text-white m-4 md:text-lg lg:font-extrabold lg:text-2xl'>
           <div>
             <h1 className='m-4'>IMPORTANCIA DE UN LIBRO.</h1>
             <p className='m-6'>Número de unidades
@@ -136,12 +139,14 @@ export default function Bookform() {
 
               Varius leo fames porttitor inceptos dui tellus eu, nascetur imperdiet cubilia aptent id natoque aliquam cum, justo in elementum cras molestie nulla. Quisque suscipit condimentum felis integer turpis tellus netus dictumst diam duis phasellus egestas tincidunt, aptent magna conubia lacinia odio libero dui magnis torquent accumsan vitae urna. Id donec aenean ac tincidunt habitant enim, cursus tellus proin pretium lectus dictum lobortis, bibendum nisi elementum leo curabitur.</p>
           </div>
+         
         </div>
-      </div>
-      <div className="bg-green-500 md:bg-red-500 lg:bg-green-500">
+       
+        <div className="bg-green-500 md:bg-red-500 lg:bg-green-500">
   prueba de cambio
 </div>
-      
+      </div>
+     
       
     </>
   )
