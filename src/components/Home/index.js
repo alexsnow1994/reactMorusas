@@ -5,7 +5,7 @@ import React from 'react'
 export default function Home() {
   return (
     <>
-      <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5'>
+      <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-5 md:bg-none'>
     <div className='grid gap grid-cols-1 text-center text-white font-mono text-2xl font-bold '>
     <h1>TALLERES PRESENCIALES</h1>
     </div>
@@ -14,6 +14,8 @@ export default function Home() {
           <img className="rounded-lg" src="http://drive.google.com/uc?export=view&id=1uCmS4UPLXybeAkm12orp4LOROks-hUyf"/>
        </div>
        <div className='m-2'>
+       <img className='rounded-lg' src="http://drive.google.com/uc?export=view&id=1Ua-mGieDB-aU4syBdrhxes7-JfvQqNZA"/>
+         
          <img className='rounded-lg' src="http://drive.google.com/uc?export=view&id=1Ua-mGieDB-aU4syBdrhxes7-JfvQqNZA"/>
        </div>
        <div className='m-2'>
