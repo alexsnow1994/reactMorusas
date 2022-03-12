@@ -9,7 +9,7 @@ export default function Home() {
     <div className='grid gap grid-cols-1 text-center text-white font-mono text-2xl font-bold '>
     <h1 className='text-indigo-500'>TALLERES PRESENCIALES</h1>
     </div>
-     <div className='grid gap md:grid-cols-4   sm:grid-cols-1 sm: p-4 sm: m-3'>
+     <div className='grid gap md:grid-cols-3  sm:grid-cols-1 sm: p-4 sm: m-3'>
        <div className='p-3'>
           <img className="rounded-lg" src="http://drive.google.com/uc?export=view&id=1uCmS4UPLXybeAkm12orp4LOROks-hUyf"/>
        </div>
@@ -21,10 +21,10 @@ export default function Home() {
        <div className='m-2'>
          <img className='rounded-lg' src="http://drive.google.com/uc?export=view&id=1g6PPxniLfn99diCrij_KSr8de64nvhU6"/>
        </div>
-       <div className='m-2 '>
+       {/* <div className='m-2 '>
          <img className='rounded-lg p-2' src="http://drive.google.com/uc?export=view&id=1oj6OOo4ApUatWzWHCZp91Y2QNLMu3lDH"/>
          <img className='rounded-lg p-2 min-h-min' src="http://drive.google.com/uc?export=view&id=1GvT02pxj9MKQXQBiuToRnowkYqqmewpR"/>
-       </div>
+       </div> */}
      </div>
      
      <div className='gird-cols-1 m-4 text-neutral-200  md:text-emerald-700 font-mono text-center'>
@@ -32,7 +32,7 @@ export default function Home() {
        <p className=''>Morusas de Ciencia es un proyecto de divulgación y difusión de la ciencia en el que se busca acercar los conocimientos de los laboratorios y espacios académicos a los barrios. Nuestro objetivo es generar experiencias divulgativas en espacios populares donde todos y todas sean libres de participar de manera activa, aprender y expresarse, pues creemos en el derecho a la cultura y el potencial de la Ciencia para transformar la calidad de vida de las personas.<br/> Este proyecto es interdisciplinario, puesto que se realizan actividades relacionadas con distintas percepciones del arte haciendo uso del conocimiento científico.</p>
      </div>
      {/* tarjetas de presentacion */}
-        <div id="presentacion"className='grid-cols-1 text-center text-emerald-600'>
+        <div id="presentacion"className='grid-cols-1 text-neutral-200 text-center md:text-emerald-700'>
           <div>
             <h1 className='m-3 text-xl'>El equipo</h1>
             <p className='m-2 text-lg'>

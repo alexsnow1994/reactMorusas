@@ -24,7 +24,8 @@ export default function Header() {
         </div> */}
         <div className="flex-1 flex items-end">
           <div className="flex-shrink-0 flex items-end font-mono content-end">
-          <img className="block  h-12 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=13gXQgZXEZCUfaoN7Z-uY709RXNDc-9mc" alt="Morusas"/>
+          {/* <img className="block  h-12 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=13gXQgZXEZCUfaoN7Z-uY709RXNDc-9mc" alt="Morusas"/> */}
+          <img className="block  h-12 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=107wsbiRk_b242azkeAcwg3yQPGbChaw" alt="Morusas"/>
             <Link to="/" type='button'>
             
             <h1 className='text-red-300'>MORUSAS DE CIENCIAS</h1>
