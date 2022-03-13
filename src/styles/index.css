@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 *{
-    font-family: 'Nunito', sans-serif;
+    
 }
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: rgb(210,234,241);
 background: linear-gradient(180deg, rgba(210,234,241,1) 22%, rgba(252,172,200,1) 49%, rgba(212,159,205,1) 90%);       
 } 
+
+#Site {
+    font-family: 'Nunito', sans-serif;
+}
 /* 
 #presentacion {
     color: #95b8f6;

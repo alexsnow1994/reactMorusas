@@ -10,7 +10,7 @@ export default function BookRender() {
   return (
       
       <>
-        <div className='grid-cols-3 text-white'>
+        <div className='grid-cols-3 text-white md:text-emerald-700'>
             <ul>
                 {
                 books.map((e, index) => {

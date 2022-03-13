@@ -53,18 +53,18 @@ export default function Bookform() {
   return (
     <>
    
-      <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-4 sm:bg-none'>
+      <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-4 sm:bg-none '>
       
         <div className=' grid grid-cols-1 md:grid-cols-2 text-center p-4  text-2xl '>
         
           <div id="bookForm">
           
-            <h1>Que libro te mueve?</h1>
+            <h1 className='text-white md:text-emerald-700'>Que libro te mueve?</h1>
             <form onSubmit={(evt) => { handleSubmit(evt) }} className="w-full max-w-lg p-4">
               <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                  <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor="grid-first-name">
-                    Titulo
+                  <label className="block uppercase tracking-wide   text-xs font-bold mb-2" htmlFor="grid-first-name">
+                    <h1 className='text-white md:text-emarald'>Titulo</h1>
                   </label>
                   <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white md:bg-white" placeholder="El resplandor"
                     name="title"
@@ -125,7 +125,7 @@ export default function Bookform() {
          
         </div>
 
-        <div className='grid grid-cols-1 text-center text-white m-4 md:text-lg lg:font-extrabold lg:text-2xl'>
+        <div className='grid grid-cols-1 text-center text-white md:text-justify   md:text-emerald-700  m-4 md:text-lg lg:font-extrabold lg:text-2xl'>
           <div>
             <h1 className='m-4'>IMPORTANCIA DE UN LIBRO.</h1>
             <p className='m-6'>Número de unidades
@@ -142,9 +142,7 @@ export default function Bookform() {
          
         </div>
        
-        <div className="bg-green-500 md:bg-red-500 lg:bg-green-500">
-  prueba de cambio
-</div>
+        
       </div>
      
       

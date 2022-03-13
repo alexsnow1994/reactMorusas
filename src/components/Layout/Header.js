@@ -7,7 +7,7 @@ export default function Header() {
     <header>
     <div className=''>
   <nav className="m-4">
-    <div className=" max-w-7xl mx-auto content-end px-2 sm:px-6 lg:mx-auto ">
+    <div className=" max-w-7xl mx-auto content-start px-2 sm:px-6 lg:mx-auto ">
       <div className="items-start text-yellow-500 relative flex text-right justify-between h-16  ">
         {/* <div className="absolute inset-y-0 left-0 flex items-right text-right sm:hidden">
         
@@ -25,10 +25,10 @@ export default function Header() {
         <div className="flex-1 flex items-end">
           <div className="flex-shrink-0 flex items-end font-mono content-end">
           {/* <img className="block  h-12 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=13gXQgZXEZCUfaoN7Z-uY709RXNDc-9mc" alt="Morusas"/> */}
-          <img className="block  h-12 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=107wsbiRk_b242azkeAcwg3yQPGbChaw" alt="Morusas"/>
+          <img className="block  h-28 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=1da7BZXRVVbrODZASvLgz8Mz12GbVIt0J" alt="Morusas"/>
             <Link to="/" type='button'>
             
-            <h1 className='text-red-300'>MORUSAS DE CIENCIAS</h1>
+            {/* <h1 className='text-indigo-500'>MORUSAS DE CIENCIAS</h1> */}
             
             </Link>
           </div>
@@ -39,11 +39,11 @@ export default function Header() {
             </Link>
               
 
-              <a  className="text-red-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Equipo</a>
+              <a  className="text-indigo-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Equipo</a>
 
-              <Link to="/talleres" type='button' className="text-red-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"><p  >Talleres</p>
+              <Link to="/talleres" type='button' className="text-indigo-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"><p  >Talleres</p>
               </Link>
-              <a  className="text-red-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendario</a>
+              <a  className="text-indigo-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendario</a>
             </div>
           </div>
         </div>
