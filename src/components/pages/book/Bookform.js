@@ -9,13 +9,14 @@ export default function Bookform() {
     books,
     getBooks,
     createBook,
-    // delatebook
+    delateBook
   } = ctxBooks
   
   const [data, setData] = useState({
     title: "",
     author: "",
-    isbn: ""
+    isbn: "",
+    _id:"",
   })
 
   const [error, setError] = useState("");
@@ -39,54 +40,76 @@ export default function Bookform() {
     };
 
     createBook(data)
+    //delatebook(_id)
 
     setData({
       title: "",
       author: "",
       isbn: "",
+      _id:"",
       img:[],
+      
     });
 
     return setError("");
 
   }
+  const handledelate = (event) => {
+    
+    
+
+
+   
+    delateBook(event)
+     
+    console.log(event);
+  
+      
+ 
+    
+
+  }
+
+  
   return (
     <>
    
-      <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-4 sm:bg-none '>
+      <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-4 md:bg-none'>
       
-        <div className=' grid grid-cols-1 md:grid-cols-2 text-center p-4  text-2xl '>
+        <div className=' grid grid-cols-1 md:grid-cols-2 text-center p-4   text-2xl '>
         
-          <div id="bookForm">
+          <div id="bookForm" className=''>
           
-            <h1 className='text-white md:text-emerald-700'>Que libro te mueve?</h1>
-            <form onSubmit={(evt) => { handleSubmit(evt) }} className="w-full max-w-lg p-4">
+            
+            <form encType='multipart/form-data' onSubmit={(evt) => { handleSubmit(evt) }} className=" text-white md:text-indigo-500 w-full max-w-lg p-4 ">
+            <h1 className='md:text-indigo-500'>Que libro te mueve?</h1>
               <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                   <label className="block uppercase tracking-wide   text-xs font-bold mb-2" htmlFor="grid-first-name">
-                    <h1 className='text-white md:text-emarald'>Titulo</h1>
+                    <h1 className='text-md md:text-xl  md:text-indigo-500  '>Titulo</h1>
                   </label>
-                  <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white md:bg-white" placeholder="El resplandor"
-                    name="title"
-                    value={data.tittle}
-                    onChange={(evt) => { handleChange(evt) }}
+                  <input className="appearance-none block w-full bg-gray-200 text-gray-700 border-rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white md:bg-white" 
+                  placeholder="El resplandor"
+                   name="title"
+                  value={data.tittle}
+                  onChange={(evt) => { handleChange(evt) }}
                   />
 
                 </div>
-                <div className="w-full md:w-1/2 px-3">
-                  <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor="grid-last-name">
+                <div className="w-full md:w-1/2 px-3 text-white md:text-indigo-500">
+                  <label className="block uppercase tracking-wide md:text-xl text-xs font-bold mb-2" htmlFor="grid-last-name">
                     Autor
                   </label>
                   <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 md:bg-white" id="grid-last-name" type="text" placeholder="Stephen King"
                     name="author"
                     value={data.author}
-                    onChange={(evt) => { handleChange(evt) }}
+                    onChange={(evt)=>{handleChange(evt)}}
                   />
                 </div>
               </div>
-              <div className="flex flex-wrap -mx-3 mb-6">
-                <div className="w-full px-3">
-                  <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" htmlFor="grid-password">
+              <div className="flex flex-wrap -mx-3 mb-6 text-white md:text-indigo-500">
+                <div className="w-full px-3 ">
+                  <label className="block uppercase tracking-wide md:text-xl text-xs font-bold mb-2" htmlFor="grid-password">
                     ISBN
                   </label>
                   <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 md:bg-white" id="grid-password" placeholder="ISBN:9780450032202"
@@ -98,15 +121,17 @@ export default function Bookform() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap -mx-3 mb-6">
-                {/* <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-white text-xs font-bold mb-2" >
+              <div className="flex flex-wrap -mx-3 mb-6  md:text-indigo-500 ">
+                <div className="w-full px-3  md:text-indigo-500 ">
+      <label className="block uppercase tracking-wide  text-xs md:text-xl  font-bold mb-2" >
         Imagen
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"   placeholder="Elresplandor.jpg"/>
+      <input type="file" name='image' className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"   placeholder="Elresplandor.jpg"/>
+      <button type='submit'>
+        upload
+      </button>
       
-      
-    </div> */}
+    </div>
                 <button 
                   type="submit" 
                   className='transition ease-in-out delay-150 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white rounded-lg'>
@@ -116,11 +141,53 @@ export default function Bookform() {
 
             </form>
           </div>
-          <div>
+          <div className='m-6'>
             {error ? error : null}
             <h1>LISTADO DE LIBROS</h1>
             
-            <BookRender/>
+            <ul>
+                {
+                books.map((e, index) => {
+                    return (
+                      
+                    <li key={index}>
+                      
+                      <div   className='m-5 grid grid-cols-1 md:grid-cols-2  md:text-indigo-500 carousel'>
+                        <div className='m-2'>
+                          <h2>titulo</h2>
+                        <p  >{e.title}</p>
+                        </div>
+                        <div className='m-2'>
+                          <h2>Autor</h2>
+                        <p  className='m-2 '> {e.author}</p>
+                        </div>
+                        <div>
+                        <h2  >ISBN</h2>
+                        <p>{e.isbn}</p>
+                        
+                        </div>
+                        
+                        <button 
+                        onClick={(evt) => { handledelate(e._id);}}     
+                        type='button' 
+                        className='bg-red-200'>eliminar</button>
+                                               
+                        </div>
+                        
+                    </li>
+                        
+                        
+                        
+                    
+                  ) 
+
+                        
+                        
+                })
+                }
+            </ul>
+            
+           
           </div>
          
         </div>

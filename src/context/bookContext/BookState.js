@@ -1,3 +1,4 @@
+import { data } from "autoprefixer";
 import React ,{useReducer} from "react";
 import axiosClient from "../../config/axios";
 import BookContext from "./BookContext";
@@ -29,11 +30,12 @@ const BookState = (props) => {
       
     }
 
-    const delateBook =  async (id)=> {
+    const delateBook =  async (_id)=> {
 
-      await axiosClient.delete("/api/books/:id", id);
-
+      await axiosClient.delete('/api/books/'+_id);
+      getBooks();
     }
+    
 
     return(
       <BookContext.Provider

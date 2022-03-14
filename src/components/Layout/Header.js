@@ -8,11 +8,11 @@
    
       
 
-    <div className='grid grid-cols-1 md:justify-items-start md:grid-cols-2 justify-items-center'>
+    <div className='grid  grid-cols-1 md:justify-items-start md:grid-cols-2 justify-items-center'>
     
-      <div className="">
+      <div className=" md:relative md:top-3 left-1/2 rounded-full items-start">
           <Link to="/" type='button'>
-              <img className="h-28 w-auto rounded-full Logo" src="http://drive.google.com/uc?export=view&id=1da7BZXRVVbrODZASvLgz8Mz12GbVIt0J" alt="Morusas"/>
+              <img className="h-28 w-auto   rounded-full  rounded-t-full  Logo" src="http://drive.google.com/uc?export=view&id=1da7BZXRVVbrODZASvLgz8Mz12GbVIt0J" alt="Morusas"/>
           </Link>
       </div>
       
