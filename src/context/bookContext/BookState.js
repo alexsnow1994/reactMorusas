@@ -30,9 +30,14 @@ const BookState = (props) => {
       
     }
 
-    const delateBook =  async (_id)=> {
+    const delateBook =  async (_id )=> {
 
-      await axiosClient.delete('/api/books/'+_id);
+      await axiosClient.delete('/api/books/'+_id );
+      getBooks();
+    }
+
+    const updateBook= async(_id ,dataForm)=>{
+      await axiosClient.put('/api/books/'+_id , dataForm)
       getBooks();
     }
     
@@ -43,7 +48,8 @@ const BookState = (props) => {
           books: globalState.books,
           getBooks,
           createBook,
-          delateBook
+          delateBook,
+          updateBook
         }}
         >
           {props.children}

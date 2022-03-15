@@ -9,7 +9,8 @@ export default function Bookform() {
     books,
     getBooks,
     createBook,
-    delateBook
+    delateBook,
+    updateBook
   } = ctxBooks
   
   const [data, setData] = useState({
@@ -24,6 +25,12 @@ export default function Bookform() {
   useEffect(() => {
     getBooks();
   }, []);
+
+  // const [update, setUpdate] = useState("");
+
+  // useEffect(() => {
+  //   updateBook();
+  // }, []);
 
   const handleChange = (event) => {
     setData({
@@ -40,7 +47,7 @@ export default function Bookform() {
     };
 
     createBook(data)
-    //delatebook(_id)
+    
 
     setData({
       title: "",
@@ -56,18 +63,30 @@ export default function Bookform() {
   }
   const handledelate = (event) => {
     
+    delateBook(event)
+    console.log(event);
+  }
     
 
 
    
-    delateBook(event)
      
-    console.log(event);
   
       
  
     
 
+  const handleUpdate =(event) =>{
+    updateBook(event ,data);
+    //event.preventDefault();
+    setData({
+      title: "",
+      author: "",
+      isbn: "",
+    });
+    
+     
+     
   }
 
   
@@ -170,7 +189,11 @@ export default function Bookform() {
                         <button 
                         onClick={(evt) => { handledelate(e._id);}}     
                         type='button' 
-                        className='bg-red-200'>eliminar</button>
+                        className='bg-red-200 rounded-xl'>eliminar</button>
+                        <button 
+                        onClick={(evt) => { handleUpdate(e._id,e.title,e.author,e.isbn);}}     
+                        type='button' 
+                        className='bg-red-200 rounded-xl'>actualizar</button>
                                                
                         </div>
                         
