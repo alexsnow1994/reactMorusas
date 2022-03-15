@@ -26,11 +26,7 @@ export default function Bookform() {
     getBooks();
   }, []);
 
-  // const [update, setUpdate] = useState("");
-
-  // useEffect(() => {
-  //   updateBook();
-  // }, []);
+ 
 
   const handleChange = (event) => {
     setData({
@@ -66,16 +62,6 @@ export default function Bookform() {
     delateBook(event)
     console.log(event);
   }
-    
-
-
-   
-     
-  
-      
- 
-    
-
   const handleUpdate =(event) =>{
     updateBook(event ,data);
     //event.preventDefault();
@@ -84,24 +70,17 @@ export default function Bookform() {
       author: "",
       isbn: "",
     });
+  }
     
      
      
-  }
-
-  
   return (
     <>
-   
       <div className='bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg m-4 md:bg-none'>
-      
         <div className=' grid grid-cols-1 md:grid-cols-2 text-center p-4   text-2xl '>
-        
           <div id="bookForm" className=''>
-          
-            
             <form encType='multipart/form-data' onSubmit={(evt) => { handleSubmit(evt) }} className=" text-white md:text-indigo-500 w-full max-w-lg p-4 ">
-            <h1 className='md:text-indigo-500'>Que libro te mueve?</h1>
+             <h1 className='md:text-indigo-500'>Que libro te mueve?</h1>
               <div className="flex flex-wrap -mx-3 mb-6">
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                   <label className="block uppercase tracking-wide   text-xs font-bold mb-2" htmlFor="grid-first-name">
@@ -113,8 +92,13 @@ export default function Bookform() {
                   value={data.tittle}
                   onChange={(evt) => { handleChange(evt) }}
                   />
-
                 </div>
+
+   
+      
+        
+          
+            
                 <div className="w-full md:w-1/2 px-3 text-white md:text-indigo-500">
                   <label className="block uppercase tracking-wide md:text-xl text-xs font-bold mb-2" htmlFor="grid-last-name">
                     Autor
@@ -162,7 +146,7 @@ export default function Bookform() {
           </div>
           <div className='m-6'>
             {error ? error : null}
-            <h1>LISTADO DE LIBROS</h1>
+            
             
             <ul>
                 {
@@ -170,10 +154,10 @@ export default function Bookform() {
                     return (
                       
                     <li key={index}>
-                      
+                      <h1>Listado de libros</h1>
                       <div   className='m-5 grid grid-cols-1 md:grid-cols-2  md:text-indigo-500 carousel'>
                         <div className='m-2'>
-                          <h2>titulo</h2>
+                          <h2 className='text-2xl'>Titulo</h2>
                         <p  >{e.title}</p>
                         </div>
                         <div className='m-2'>
@@ -185,16 +169,16 @@ export default function Bookform() {
                         <p>{e.isbn}</p>
                         
                         </div>
-                        
+                        <div className='grid grid-cols-1 text-white text-md  md:text-l '>
                         <button 
                         onClick={(evt) => { handledelate(e._id);}}     
                         type='button' 
-                        className='bg-red-200 rounded-xl'>eliminar</button>
+                        className='m-6 bg-yellow-400 md:bg-red-700 rounded-xl'>eliminar</button>
                         <button 
                         onClick={(evt) => { handleUpdate(e._id,e.title,e.author,e.isbn);}}     
                         type='button' 
-                        className='bg-red-200 rounded-xl'>actualizar</button>
-                                               
+                        className= 'm-6 bg-red-400 md:bg-red-500 rounded-xl'>actualizar</button>
+                        </div>                       
                         </div>
                         
                     </li>
@@ -209,8 +193,6 @@ export default function Bookform() {
                 })
                 }
             </ul>
-            
-           
           </div>
          
         </div>
@@ -239,3 +221,15 @@ export default function Bookform() {
     </>
   )
 }
+    
+
+
+   
+     
+  
+      
+ 
+    
+
+
+  
