@@ -37,7 +37,12 @@ const BookState = (props) => {
     }
 
     const updateBook= async(_id ,dataForm)=>{
-      await axiosClient.put('/api/books/'+_id , dataForm)
+      const res =await axiosClient.put('/api/books/'+_id , dataForm)
+      dispatch({
+        type:"PUT_ALL_BOOKS",
+        payload: res.data
+      });
+      
       getBooks();
     }
     

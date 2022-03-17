@@ -63,13 +63,22 @@ export default function Bookform() {
     console.log(event);
   }
   const handleUpdate =(event) =>{
+    
+    if (!data.title || !data.author || !data.isbn) {
+      return setError("Tienes campos vacíos.")
+    };
+    
     updateBook(event ,data);
-    //event.preventDefault();
+     event.preventDefault();
+    
+
     setData({
       title: "",
       author: "",
       isbn: "",
     });
+
+    return setError("");
   }
     
      

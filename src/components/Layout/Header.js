@@ -35,13 +35,12 @@
           
             <div className="content-end sm:block sm:ml-6 items-right text-right">
               <div className="flex text-center space-x-4">
-              <Link to='/bookform' type='button' className='transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ... text-white rounded-lg'>
-              <p aria-current="page">Tu Libro</p>
-              </Link>
-                
-
-                <a  className="text-indigo-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Equipo</a>
-
+                <Link to='/bookform' type='button' className='transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ... text-white rounded-lg'>
+                <p aria-current="page">Tu Libro</p>
+                </Link>
+                <Link to='/comments'>
+                <a  className="text-indigo-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Comentarios</a>
+                </Link>
                 <Link to="/talleres" type='button' className="text-indigo-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"><p  >Talleres</p>
                 </Link>
                 <a  className="text-indigo-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendario</a>
@@ -52,6 +51,9 @@
         </div>
       </div>
           
+                
+
+
 
               
               

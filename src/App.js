@@ -8,7 +8,7 @@ import Bookform from './components/pages/book/Bookform';
 import BookState from './context/bookContext/BookState';
 import Layout from './components/Layout';
 import Talleres from './components/pages/talleres/Talleres';
-
+import Comments from './components/pages/comments/Comments';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Route path="/" element={<Home/>}/>  
           <Route path='/bookform' element={<Bookform/>}/>
           <Route path="/talleres" element={<Talleres/>}/>
+          <Route path='/comments' element={<Comments/>}/>
         </Route>
       </Routes>
       
